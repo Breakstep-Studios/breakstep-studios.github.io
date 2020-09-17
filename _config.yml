@@ -24,9 +24,16 @@ github_username:  breakstep-studios
 
 # Build settings
 markdown: kramdown
-#theme: minima
+#theme: null
+
 plugins:
   - jekyll-feed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
@@ -39,10 +46,3 @@ plugins:
 #   - vendor/cache/
 #   - vendor/gems/
 #   - vendor/ruby/
-
-
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "default"

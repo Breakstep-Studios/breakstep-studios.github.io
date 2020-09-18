@@ -12,3 +12,9 @@ footer {
         }
     }
 }
+
+@media only screen and (max-width: 540px) {
+    p {
+        font-size: 0.8rem;
+    }
+}

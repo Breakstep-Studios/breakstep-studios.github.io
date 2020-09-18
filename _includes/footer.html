@@ -1,10 +1,10 @@
 <footer class="footer mt-auto py-4">
     <div class="container">
         <div class="row no-gutters">
-            <div class="col-10">
+            <div class="col-12 col-sm-10 text-center text-sm-left order-1 order-sm-0">
                 <p>{{ site.legal_name }} | Privacy Policy</p>
             </div>
-            <div class="col text-right social">
+            <div class="col text-center text-sm-right mb-2 mb-sm-0 social">
                 {% for item in site.data.social %}
                 <a href="{{ item.link }}">
                     <i class="fab {{ item.font_awesome_class }} fa-lg"></i>

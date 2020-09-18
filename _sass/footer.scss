@@ -6,5 +6,8 @@ footer {
     }
     .fab {
         color: white;
+        &.fa-twitter:hover {
+            color:#1C9CEB;
+        }
     }
 }

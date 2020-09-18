@@ -1,8 +1,9 @@
 footer {
     color: white;
-
     p {
         margin:0;
+        text-transform: uppercase;
+        letter-spacing: $letter-spacing;
     }
     .fab {
         color: white;

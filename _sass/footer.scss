@@ -4,6 +4,12 @@ footer {
         margin:0;
         text-transform: uppercase;
         letter-spacing: $letter-spacing;
+        a {
+            color:white;
+            &:hover {
+                color:white;
+            }
+        }
     }
     .fab {
         color: white;

@@ -29,6 +29,10 @@ footer {
     }
 }
 
+#logo-container {
+    pointer-events: none;
+}
+
 // used for displaying our game video in the background
 .vimeo-wrapper {
     position: fixed;

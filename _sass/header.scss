@@ -14,6 +14,19 @@ nav {
       border-bottom:2px solid;
     }
 
+    .dropdown-menu {
+      border:none;
+      border-bottom: 1px solid white;
+      background: none;
+      border-radius: 0;
+      .dropdown-item {
+        color:white;
+        &:hover {
+          background: none;
+        }
+      }
+
+    }
   }
 
   .custom-toggler.navbar-toggler {

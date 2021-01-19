@@ -6,27 +6,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for item in site.data.navigation %}
-                <li class="nav-item  {% if page.url == item.link  %}active{% endif %}">
-                    <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>
+                <li class="nav-item {% if item.dropdown != nil %}dropdown{% endif %} {% if page.url == item.link  %}active{% endif %}">
+                    {% if item.dropdown == nil %}
+                    <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>                
+                    {% else %}
+                    <a href="{{ item.link }}" id="{{item.name | downcase}}-dropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ item.name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="{{item.name | downcase}}-dropdown">
+                        {% for dropdown_item in item.dropdown %}
+                        <a class="dropdown-item" href="{{ dropdown_item.link }}">{{ dropdown_item.name }}</a>   
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </li>
                 {% endfor %}
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Games
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Command Center Earth</a>
-                    </div>
-                </li>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      Command Center Earth
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Updates</a>
-                      <a class="dropdown-item" href="#">Press Kit</a>
-                    </div>
-                </li>
             </ul>
         </div>
     </div>

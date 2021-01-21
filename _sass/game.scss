@@ -7,16 +7,24 @@
   height: 60px;
 }
 
-.android-badge {
-
-}
-
-.ios-badge{
-
-}
-
 @media (max-width: 576px) {
   .social-badge {
     height: 45px;
+  }
+}
+@media (max-width: 375px) {
+  #android-badge-column {
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align: left !important;
+  }
+
+  #ios-badge-column {
+    text-align: right !important;
+  }
+
+  img.social-badge {
+    max-width: 100%;
+    height: auto;
   }
 }

@@ -3,4 +3,4 @@
 - name: Games
   dropdown:
     - name: Command Center Earth
-      link: /games/command-center-earth.html
+      link: /games/command-center-earth

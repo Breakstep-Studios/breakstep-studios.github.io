@@ -10,7 +10,10 @@
                     {% if item.dropdown == nil %}
                     <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>                
                     {% else %}
-                    <a href="{{ item.link }}" id="{{item.name | downcase}}-dropdown" class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    {% assign nav_item_in_dropdown = item.dropdown | where: "link", page.url | first %}
+                    <a href="{{ item.link }}" id="{{item.name | downcase}}-dropdown"
+                       class="nav-link dropdown-toggle {% if nav_item_in_dropdown != nil %}active{% endif %}"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         {{ item.name }}
                     </a>
                     <div class="dropdown-menu" aria-labelledby="{{item.name | downcase}}-dropdown">

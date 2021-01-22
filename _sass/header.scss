@@ -13,7 +13,9 @@ nav {
     &.active {
       border-bottom:2px solid;
     }
-
+    &.dropdown.show{
+      //border-bottom:none;
+    }
     .dropdown-menu {
       border:none;
       border-bottom: 1px solid white;
@@ -21,6 +23,10 @@ nav {
       border-radius: 0;
       .dropdown-item {
         color:white;
+        &.active {
+          background: none;
+          font-weight: bold;
+        }
         &:hover {
           background: none;
         }

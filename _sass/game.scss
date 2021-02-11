@@ -6,7 +6,10 @@
   width: auto;
   height: 60px;
 }
-
+#game-logo {
+  max-width:25%;
+  height: auto;
+}
 @media (max-width: 576px) {
   .social-badge {
     height: 45px;

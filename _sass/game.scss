@@ -15,6 +15,11 @@
     height: 45px;
   }
 }
+@media (max-width: 768px) {
+  #game-logo {
+    max-width: 35%;
+  }
+}
 @media (max-width: 375px) {
   #android-badge-column {
     margin-top:auto;

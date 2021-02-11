@@ -3,13 +3,7 @@ html, body {
     padding: 0;
     min-height: 100%;
     height:100%;
-    background-color: rgba(0,0,0,0.3);
     font-family: 'Source Sans Pro';
-}
-
-// fixes bug preventing us from clicking due to logo container taking up whole screen
-#logo-container {
-    pointer-events: none;
 }
 
 // used for displaying our game video in the background
@@ -23,7 +17,11 @@ html, body {
     pointer-events: none;
     overflow: hidden;
     background-color: $main-color;
-
+    .overlay {
+      background-color: rgba(0,0,0,0.3);
+      width: 100%;
+      height:100%;
+    }
     iframe {
       width: 100vw;
       height: 56.25vw; /* Given a 16:9 aspect ratio, 9/16*100 = 56.25 */
@@ -33,5 +31,6 @@ html, body {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+      z-index: -1;
     }
  }

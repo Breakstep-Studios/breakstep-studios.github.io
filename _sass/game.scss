@@ -1,0 +1,38 @@
+.video-pop {
+  box-shadow: 0 0 20px black;
+}
+
+.social-badge {
+  width: auto;
+  height: 60px;
+}
+#game-logo {
+  max-width:25%;
+  height: auto;
+}
+@media (max-width: 576px) {
+  .social-badge {
+    height: 45px;
+  }
+}
+@media (max-width: 768px) {
+  #game-logo {
+    max-width: 35%;
+  }
+}
+@media (max-width: 375px) {
+  #android-badge-column {
+    margin-top:auto;
+    margin-bottom:auto;
+    text-align: left !important;
+  }
+
+  #ios-badge-column {
+    text-align: right !important;
+  }
+
+  img.social-badge {
+    max-width: 100%;
+    height: auto;
+  }
+}

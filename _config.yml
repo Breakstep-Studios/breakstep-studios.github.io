@@ -29,12 +29,23 @@ markdown: kramdown
 
 plugins:
   - jekyll-feed
+  - jekyll-redirect-from
+
+collections:
+  games:
+    output: true
+    permalink: /:collection/:name
 
 defaults:
   - scope:
       path: ""
     values:
       layout: "default"
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "game"
 
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list

@@ -6,8 +6,21 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 {% for item in site.data.navigation %}
-                <li class="nav-item  {% if page.url == item.link  %}active{% endif %}">
-                    <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>
+                {% assign nav_item_in_dropdown = item.dropdown | where: "link", page.url | first %}
+                <li class="nav-item {% if item.dropdown != nil %}dropdown{% endif %} {% if page.url == item.link or nav_item_in_dropdown != nil %}active{% endif %}">
+                    {% if item.dropdown == nil %}
+                    <a href="{{ item.link }}" class="nav-link">{{ item.name }}</a>                
+                    {% else %}
+                    <a href="{{ item.link }}" id="{{item.name | downcase}}-dropdown" class="nav-link dropdown-toggle"
+                       role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ item.name }}
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="{{item.name | downcase}}-dropdown">
+                        {% for dropdown_item in item.dropdown %}
+                        <a class="dropdown-item {% if page.url == dropdown_item.link  %}active{% endif %} " href="{{ dropdown_item.link }}">{{ dropdown_item.name }}</a>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                 </li>
                 {% endfor %}
             </ul>

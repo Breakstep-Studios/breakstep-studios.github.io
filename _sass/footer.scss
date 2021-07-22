@@ -16,6 +16,12 @@ footer {
         &.fa-twitter:hover {
             color:#1C9CEB;
         }
+        &.fa-tiktok:hover {
+            filter: drop-shadow(2px 2px 0px #F7004D) drop-shadow(-2px -2px 0px #00EAE3)
+        }
+        &.fa-youtube:hover {
+            color:#FF0000;
+        }
     }
 }
 

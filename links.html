@@ -1,0 +1,24 @@
+---
+title: Links
+layout: centered
+permalink: /links.html
+background_loop_vimeo_id: 511317102
+---
+<div id="links">
+    <div class="row mb-4">
+        <div class="col">
+            <img id="link-profile-img" src="./assets/img/Profile.jpeg" class="border border-light rounded-circle" alt="...">
+            <h5 class="mt-3">Breakstep Studios</h5>
+        </div>
+    </div>
+    {% for item in site.data.linktree %}
+    <div class="row mb-3">
+        <div class="col">
+            <a class="btn btn-outline-light btn-block" href="{{ item.link }}" role="button">
+                <i class="fab {{ item.font_awesome_class }} fa-lg pr-2"></i>
+                {{item.title}}
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+</div>

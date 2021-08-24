@@ -1,6 +1,6 @@
 ---
 title: Links
-layout: centered
+layout: top-centered
 permalink: /links.html
 background_loop_vimeo_id: 511317102
 ---
@@ -14,7 +14,7 @@ background_loop_vimeo_id: 511317102
     {% for item in site.data.linktree %}
     <div class="row mb-3">
         <div class="col">
-            <a class="btn btn-outline-light btn-block" href="{{ item.link }}" role="button">
+            <a class="btn btn-outline-light btn-block links-link" href="{{ item.link }}" role="button">
                 <i class="fab {{ item.font_awesome_class }} fa-lg pr-2"></i>
                 {{item.title}}
             </a>

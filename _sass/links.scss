@@ -4,7 +4,14 @@
     width:auto;
     border-width: 2px !important;
   }
-  a {
-    padding: 1rem 1.5rem;
+  a.links-link {
+    position:relative;
+    padding: 1rem 3.5rem;
+    i {
+      position: absolute;
+      top:50%;
+      transform: translateY(-50%);
+      left:1.5rem;
+    }
   }
 }

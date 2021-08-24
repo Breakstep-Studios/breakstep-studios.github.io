@@ -6,12 +6,21 @@
   }
   a.links-link {
     position:relative;
-    padding: 1rem 3.5rem;
-    i {
+    padding: 1rem 4rem;
+    i, img {
       position: absolute;
-      top:50%;
+      top: 50%;
       transform: translateY(-50%);
-      left:1.5rem;
+      left: 1.5rem;
+    }
+    i {
+      padding-left:0.5rem;
+    }
+    img {
+      height: 35px;
+      width: 34px;
+      object-fit: cover;
+      border-radius: 0.25rem;
     }
   }
 }

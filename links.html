@@ -15,7 +15,12 @@ background_loop_vimeo_id: 511317102
     <div class="row mb-3">
         <div class="col">
             <a class="btn btn-outline-light btn-block links-link" href="{{ item.link }}" role="button">
-                <i class="fab {{ item.font_awesome_class }} fa-lg pr-2"></i>
+                {% case item.media_type %}
+                    {% when "icon" %}
+                        <i class="fab {{ item.media_data }} fa-lg"></i>
+                    {% when "img" %}
+                        <img src="{{ item.media_data }}">
+                {% endcase %}
                 {{item.title}}
             </a>
         </div>

@@ -8,7 +8,7 @@ html, body {
 }
 
 // used for displaying our game video in the background
-.vimeo-wrapper {
+.fullscreen-bg-vimeo-wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -20,6 +20,9 @@ html, body {
     background-color: $main-color;
     .android-web-view-play-blocker {
       position: absolute;
+      visibility: visible;
+      opacity: 1;
+      transition: visibility 0.1s, opacity 0.1s linear;
       background-color: rgba(9, 26, 40,1);
       width: 100%;
       height:100%;

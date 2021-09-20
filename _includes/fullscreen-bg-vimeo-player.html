@@ -1,0 +1,34 @@
+<!-- todo we might want to move this script in to a "main.js" that runs on all pages" -->
+<script>
+    /**
+     * On some versions of android the video background shows as a grey play button, this will prevent that
+     */
+    let hideAndroidWebViewGrayPlayButtonOnBgVideoPlay = function() {
+        let iframe = document.querySelector('.fullscreen-bg-vimeo-wrapper iframe');
+        let player = new Vimeo.Player(iframe);
+
+        //see vimeo events https://developer.vimeo.com/player/sdk/reference#events-for-playback-controls
+        player.on('play', function () {
+            //add two 200 milliseconds after play as it doesn't actually start playing instantly
+            setTimeout(function () {
+                let androidWebViewPlayBlocker = document.getElementsByClassName("android-web-view-play-blocker")[0];
+                androidWebViewPlayBlocker.style.visibility = "hidden";
+                androidWebViewPlayBlocker.style.opacity = "0";
+            }, 250);
+        });
+    };
+    window.addEventListener('DOMContentLoaded',() => {
+        hideAndroidWebViewGrayPlayButtonOnBgVideoPlay();
+    });
+</script>
+<div class="fullscreen-bg-vimeo-wrapper">
+    <div class="android-web-view-play-blocker"></div>
+    <div class="overlay"></div>
+    <iframe
+        src="https://player.vimeo.com/video/{{ include.id }}?background=1&autoplay=1&loop=1&byline=0&title=0"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+    </iframe>
+</div>

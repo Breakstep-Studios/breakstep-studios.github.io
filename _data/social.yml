@@ -1,9 +1,12 @@
 - name: TikTok
   link: https://www.tiktok.com/@breakstepstudios
   font_awesome_class: "fa-tiktok"
-- name: Twitter
-  link: https://twitter.com/meatloaf1024
-  font_awesome_class: "fa-twitter"
+- name: Discord
+  link: https://discord.gg/4KcZwWEh
+  font_awesome_class: "fa-discord"
 - name: YouTube
   link: https://www.youtube.com/channel/UCM07FnXXLUdKxJRgpDtc7JQ
   font_awesome_class: "fa-youtube"
+- name: Twitter
+  link: https://twitter.com/meatloaf1024
+  font_awesome_class: "fa-twitter"

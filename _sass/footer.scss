@@ -17,6 +17,9 @@ footer {
             &:last-of-type{
                 margin-right: 0;
             }
+            &:hover {
+                text-decoration: none;
+            }
         }
         .fab {
             color: white;
@@ -28,6 +31,9 @@ footer {
             }
             &.fa-youtube:hover {
                 color:#FF0000;
+            }
+            &.fa-discord:hover {
+                color:#5865F2
             }
         }
     }

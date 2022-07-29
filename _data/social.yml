@@ -7,6 +7,9 @@
 - name: YouTube
   link: https://www.youtube.com/channel/UCM07FnXXLUdKxJRgpDtc7JQ
   font_awesome_class: "fa-youtube"
+- name: Instagram
+  link: https://www.instagram.com/breakstepstudios/
+  font_awesome_class: "fa-instagram"
 - name: Twitter
   link: https://twitter.com/meatloaf1024
   font_awesome_class: "fa-twitter"

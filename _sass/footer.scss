@@ -26,6 +26,16 @@ footer {
             &.fa-twitter:hover {
                 color:#1C9CEB;
             }
+            &.fa-instagram:hover {
+                background: -webkit-gradient(linear, left bottom, right top, from(#FED650), color-stop(#F83A38), to(#CB38BD));
+                background: -o-linear-gradient(left bottom, #FED650, #F83A38, #CB38BD);
+                background: linear-gradient(to right top, #FED650, #F83A38, #CB38BD);
+                -webkit-background-clip: text;
+                background-clip: text;
+                color: transparent;
+                padding-top: 2px;
+                padding-bottom: 2px;
+            }
             &.fa-tiktok:hover {
                 filter: drop-shadow(2px 2px 0px #F7004D) drop-shadow(-2px -2px 0px #00EAE3)
             }

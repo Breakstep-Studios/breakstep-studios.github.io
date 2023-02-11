@@ -1,6 +1,11 @@
 <nav class="navbar navbar-expand-lg navbar-dark py-4">
     <div class="container">
-        <button class="navbar-toggler custom-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        {% if page.url != "/" %}
+            <a class = "mr-auto ">
+                <img id="company-logo" src="/assets/img/Logo.png" class = "d-block d-lg-none d-xl-none" width = "auto" height = "40px" alt ="Company Logo">
+            </a>    
+        {%endif%}
+        <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">

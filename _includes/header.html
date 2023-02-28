@@ -1,8 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark py-4">
     <div class="container">
         {% if page.url != "/" %}
-            <a class = "mr-auto ">
-                <img id="company-logo" src="/assets/img/Logo.png" class = "d-block d-lg-none d-xl-none" width = "auto" height = "40px" alt ="Company Logo">
+            <!-- navbar-brand not added to <a> below as it adds additional padding to top and bottom of logo we don't want currently. Consider if adding it later makes sense -->
+            <a class="">
+                <img id="company-logo" src="/assets/img/Logo.png" class="d-block d-lg-none d-xl-none" width="auto" height="40px" alt="Company Logo">
             </a>    
         {%endif%}
         <button class="navbar-toggler custom-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
